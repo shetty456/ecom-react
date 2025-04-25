@@ -7,15 +7,15 @@ interface StoreState {
   phonenumber: string;
   password: string;
   otp: string;
-  loginphonenumber: string;
+  loginPhonenumber: string;
   loginPassword: string;
   setSplashVisible: (visible: boolean) => void;
   setOtpVisible: (visible: boolean) => void;
   setUsername: (username: string) => void;
-  setEmail: (phonenumber: string) => void;
+  setPhonenumber: (phonenumber: string) => void;  
   setPassword: (password: string) => void;
   setOtp: (otp: string) => void;
-  setLoginEmail: (email: string) => void;
+  setLoginPhonenumber: (phonenumber: string) => void; 
   setLoginPassword: (password: string) => void;
 }
 
@@ -26,16 +26,16 @@ const useStore = create<StoreState>((set) => ({
   phonenumber: '',
   password: '',
   otp: '',
-  loginphonenumber: '',
+  loginPhonenumber: '',
   loginPassword: '',
   
   setSplashVisible: (visible: boolean) => set({ splashVisible: visible }),
   setOtpVisible: (visible: boolean) => set({ otpVisible: visible }),
   setUsername: (username: string) => set({ username }),
-  setEmail: (phonenumber: string) => set({ phonenumber}),
+  setPhonenumber: (phonenumber: string) => set({ phonenumber }),  
   setPassword: (password: string) => set({ password }),
   setOtp: (otp: string) => set({ otp }),
-  setLoginEmail: (phonenumber: string) => set({ loginphonenumber: phonenumber }),
+  setLoginPhonenumber: (phonenumber: string) => set({ loginPhonenumber: phonenumber }),
   setLoginPassword: (password: string) => set({ loginPassword: password }),
 }));
 
